@@ -109,6 +109,9 @@ describe('Задания core js', () => {
         const dummyFunction = () => {};
 
         it('Возвращает true если объекты равны', () => {
+            assert.equal(core.deepEqual(
+                {obj: {arr: [1, {t:1}]}}, {obj: {arr: [1, {t:1}]}}
+                ), true);
             assert.equal(
                 core.deepEqual(
                     {text: 'some text', count: 3, arr: [11, 22]},

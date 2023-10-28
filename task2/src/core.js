@@ -10,7 +10,7 @@ function even() {
     do {
         if (!(i % 2)) arr.push(i);
         i++;
-    } while (arr[arr.length - 1] != 20 || arr.length === 0);
+    } while (arr[arr.length - 1] !== 20 || arr.length === 0);
     return arr;
 }
 
@@ -79,9 +79,9 @@ function getOperationFn(initialValue, operatorFn) {
  * console.log(generator()); // 7
  * console.log(generator()); // 9
  */
-function sequence(start, step) {
-    let res = start === undefined ? 0 : start;
-    let stepp = step === undefined ? 1 : step;
+function sequence(start = 0, step = 1) {
+    let res = start;
+    let stepp = step;
     return function generator() {
         let resex = res;
         res += stepp;
@@ -110,7 +110,7 @@ function deepEqual(firstObject, secondObject) {
         if (firstObject.length !== secondObject.length) return false;
         for (let i = 0; i < firstObject.length; i++) {
             console.log(firstObject[i], secondObject[i]);
-            if (firstObject[i] !== secondObject[i]) return false;
+            if (!deepEqual(firstObject[i], secondObject[i])) return false;
         }
         return true;
     } else if (
