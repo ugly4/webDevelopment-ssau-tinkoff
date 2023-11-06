@@ -4,25 +4,26 @@
     justify-content: center;
   }
 
-.frontendDev-block{
+.frontendDev{
     display: flex;
     flex-direction: column;
     padding: 40px 128px;
     gap: 64px;
 
-    .text-block{
+    &__text-block{
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 40px;
 
-        .text{
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
+        
     }
-    .subtitle{
+    &__text{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    &__subtitle{
         font: var(--font-text);
         display: flex;
         justify-content: center;
@@ -102,12 +103,11 @@
         align-items: center;
         border-radius: var(--radius-l);
         background-color: var(--base-01);
-
-        &__info{
-            .text-basic();
-            margin: 0;
-            text-align: center;
-        }
+    }
+    &__stage-info{
+        .text-basic();
+        margin: 0;
+        text-align: center;
     }
 }
 
