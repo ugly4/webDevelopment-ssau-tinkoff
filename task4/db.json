@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": "18a24c731b9fb",
+      "name": "Арбуз",
+      "url": "https://smekalo4ka.ru/wp-content/uploads/2017/06/arbuz.jpg",
+      "description": "вкусный сочный",
+      "code": 11,
+      "provider": "Астрахань"
+    },
+    {
+      "id": "82e43ecb3c924",
+      "name": "XBOX 360",
+      "url": "https://www.66game.ru/upload/iblock/63b/63b169277b3c17156dbc531abb4149fa.jpg",
+      "description": "уже старый",
+      "code": 360,
+      "provider": "Microsoft"
+    },
+    {
+      "id": "a7e5507b46df8",
+      "name": "Лайм",
+      "url": "https://kera-nika.ru/upload/iblock/068/068b41bfa4c8f6f69628254d41297d69.jpg",
+      "description": "кислый",
+      "code": "22",
+      "provider": "Перекресток"
+    },
+    {
+      "id": "7827f6ba4d154",
+      "name": "Майк Вазовски",
+      "url": "https://i.pinimg.com/736x/bf/8d/c9/bf8dc93eb4b8c7b240e0f7ec2af64bab.jpg",
+      "description": "добрый малый",
+      "code": "33",
+      "provider": "Корпорация монстров"
+    }
+  ],
+  "profile": {
+    "name": "Федякин Александр",
+    "group": "6407"
+  }
+}
