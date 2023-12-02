@@ -15,7 +15,11 @@
 - install node.js v16>(npm v7.x>) (https://nodejs.org/en/download/)
 - install git(https://git-scm.com/downloads)
 
-
+Для запуска сервера:
+- npm install -g json-server
+База данных приведена в файле db.json
+Запустить JSON сервер:
+- json-server --watch db.json
 
 Далее:
 
