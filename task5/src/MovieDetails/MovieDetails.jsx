@@ -11,14 +11,11 @@ import CloseIcon from '@mui/icons-material/Close';
 import StarIcon from '@mui/icons-material/Star';
 
 const MovieDetails = () => {
-
-    // запрос
     const param = useParams();
     const [movie, setMovie] = useState({});
     const [favorites, setFavorites] = useState();
     const [isFav, setIsFav] = useState();
-
-    
+   
     async function fetchMovie(){ 
         try {
             await fetch(`http://localhost:3001/movies/${param.imdbID}`).then( (response) =>  response.json()).then(
@@ -48,6 +45,7 @@ const MovieDetails = () => {
         })().catch(error => { console.error(error); });
     }, [param])
 
+    //проверка: есть ли фильм в "любимых"
     useEffect(() => {
         if(favorites){
             for (let i =0; i < favorites.length; i++){
@@ -88,7 +86,7 @@ const MovieDetails = () => {
           </IconButton>
         </React.Fragment>
     );
-    
+    //--
     //рейтинг
     function generateRating(){
         return ((Math.random() * 90 + 10)/10).toFixed(1);
@@ -107,6 +105,7 @@ const MovieDetails = () => {
     let rating = generateRating();
     const navigate = useNavigate();
 
+    //добавление фильма в "любимые"
     async function addToFav(){
         try {
             await fetch('http://localhost:3001/favorites', {
